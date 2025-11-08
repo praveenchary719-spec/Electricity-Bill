@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="index.css"
+</head>
+<body>
+    <section>
+        <div class="panel">
+           <h2>Electricity Bill Caluclator</h2> 
+           <h3>Current Tariff Slabs</h3>
+           <table>
+                <thead>
+                    <tr>
+                        <th>Units</th>
+                        <th>Rate per Unit (Rs.)</th>
+                    </tr>
+                    <tr>
+                        <td>0 - 100 </td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>101 - 200</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>200 above </td>
+                        <td> 10</td>
+                    </tr>
+                </thead>
+           </table>
+           <legend>Enter Units Consumed:</legend>
+           <input type="number" id="units" />
+           <button onclick="calculateBill()">Caluclate</button>
+           <label>Total Electricity Bill: Rs.<span id="amount"></span></label>
+        </div>
+    </section>
+</body>
+<script>
+    function calculateBill(){
+        let unitsConsumed = parseFloat(units.value);
+        let billAmount = 0.0;
+
+        // Claculate tariff
+
+        if(unitsConsumed <= 100)
+            billAmount = unitsConsumed * 5;
+        else if(unitsConsumed <= 200)
+            billAmount = (100 * 5 ) + ((unitsConsumed - 100) * 7);
+        else
+            billAmount = (100 * 5) + (100 * 7) + ((unitsConsumed - 100) * 10);
+        amount.innerHTML = billAmount.toFixed(2);
+    }
+</script>
+</html>

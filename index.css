@@ -1,0 +1,79 @@
+html, body{
+    margin: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #000;
+    font-size: 10pt;
+}
+:focus{
+    outline:none ;
+}
+section{
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .panel{
+    width: 400px;
+    height: 450px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 10px 20px #ccc;
+
+    display: flex;
+    flex-direction: column;
+}
+section .panel h2{
+    text-align: center;
+}
+section .panel h3{
+    border-bottom: 1px solid #ccc;
+}
+section .panel table{
+    border-collapse: collapse;
+}
+section .panel table th{
+    background: #000;
+    color: #fff;
+}
+section .panel table thead tr,
+section .panel table  tr{
+    height: 30pt;
+
+}
+section .panel table tr td,
+section .panel table thead tr th{
+    text-align: center;
+    border: 1px solid #000;
+}
+section .panel legend{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+section .panel input{
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+section .panel button{
+    margin-top: 20px;
+    border-radius: 4px;
+    background: #000;
+    color: #fff;
+    height: 30pt;
+    font-weight: bold;
+}
+section .panel button:hover{
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+}
+section .panel label{
+    color: green;
+    font-size: 12pt;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+}
